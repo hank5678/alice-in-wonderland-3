@@ -171,6 +171,8 @@
   .contents1 {
     width: 665px;
     padding: 50px;
+    margin: 20px;
+    margin-left: 122px;
   }
   .title1 {
     font-size: 62px;
@@ -240,6 +242,8 @@
   .contents1 {
     width: 665px;
     padding: 50px;
+    margin: 20px;
+    margin-left: 122px;
   }
   .title1 {
     font-size: 62px;
