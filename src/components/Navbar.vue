@@ -27,25 +27,21 @@
       <div class="mail">
         <div>
           <input type="text" placeholder="Mail bültenimize kayıt ol" />
-          <div class="redbutton mailsend">Kayıt Ol</div>
         </div>
+        <div class="redbutton mailsend">Kayıt Ol</div>
       </div>
     </div>
     <div class="contents1">
-      <div class="title">
-        Bilgi Teknolojilerinde<br />
-        23 Yıllık Tecrübe
-      </div>
-      <div class="content">
-        Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı<br />
-        sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş<br />
+      <div class="title1">Bilgi Teknolojilerinde <br />23 Yıllık Tecrübe</div>
+      <div class="content1">
+        Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı <br />sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş<br />
         Analizi ve Test Yönetimi hizmetleri sunmaktayız.
       </div>
-      <div class="mail">
+      <div class="mail1">
         <div>
           <input type="text" placeholder="Mail bültenimize kayıt ol" />
-          <div class="redbutton mailsend">Kayıt Ol</div>
         </div>
+        <div class="redbutton mailsend">Kayıt Ol</div>
       </div>
     </div>
   </div>
@@ -56,111 +52,71 @@
 <style scoped>
 .container {
   background-image: radial-gradient(circle at 141% 78%, #fff, rgba(255, 255, 255, 0) 107%), url("@/assets/images/rectangle-1.jpg");
-
   background-size: cover;
   background-position: right 35% bottom 45%;
   width: 100%;
 }
-.line1 {
-  border: 1px solid black;
-  width: 20px;
-}
-.line2 {
-  border: 1px solid black;
-  width: 20px;
-  margin-top: 5px;
-}
-.line3 {
-  border: 1px solid black;
-  width: 20px;
-  margin-top: 5px;
-}
 .navs {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 20px;
   align-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  width: 100%;
-}
-
-.navs > div {
-  margin: 25px;
-}
-.box {
-  display: flex;
-}
-.items {
-  display: flex;
-  align-items: center;
-}
-.items > div {
-  margin-right: 20px;
 }
 
 .redbutton {
-  color: white;
-  border-radius: 5px;
   background-color: #f84646;
+  color: #fff;
   padding: 10px;
-  width: 77px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 91px;
   text-align: center;
 }
 .contents {
-  margin-top: 10%;
-  font-size: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
 }
 .title {
-  width: 100%;
   font-size: 40px;
-  text-align: center;
 }
 .content {
-  margin-top: 20px;
-  text-align: center;
   font-size: 12px;
+  line-height: 1.92;
 }
 .mail {
-  display: inline-block;
-  width: 100%;
-  background: #ffff;
-  border-radius: 8px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-.mail > div {
-  padding: 6px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
 }
 .mail input {
   outline: none;
   border: none;
-  font-size: 14px;
   color: rgba(0, 0, 0, 0.4);
-  padding: 15px;
-  border-radius: 8px;
+  padding-left: 15px;
 }
-
 .mailsend {
-  float: right;
-  width: 66px;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+  width: 90.8px !important;
+  height: 30px !important;
+  padding-top: 15px;
 }
 .line1 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
+  border: 1px solid black;
+  width: 20px;
 }
 .line2 {
-  stroke-dasharray: 60 60;
-  stroke-width: 6;
+  border: 1px solid black;
+  width: 20px;
+  margin-top: 5px;
 }
 .line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
+  border: 1px solid black;
+  width: 20px;
+  margin-top: 5px;
 }
+
 @media (min-width: 375px) and (max-width: 1023px) {
   .items {
     display: none !important;
@@ -173,64 +129,137 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .hamburger {
-    display: none !important;
-  }
-  .contents {
-    display: none !important;
-  }
-}
-@media (min-width: 1440px) {
-  .hamburger {
-    display: none !important;
-  }
-  .mail {
-    display: inline-block;
+  .container {
+    background-image: url("@/assets/images/rectangle-1.jpg");
+    background-size: cover;
     width: 100%;
-    background: #ffff;
-    border-radius: 8px;
-    margin-top: 40px;
-    margin-bottom: 20px;
   }
-  .mailsend {
-    float: right;
-    width: 66px;
-    text-align: center;
-    padding: 15px;
-    font-size: 16px;
+  .navs {
+    display: flex;
   }
-  .contents {
+  .hamburger {
     display: none !important;
   }
   .navs {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .navs > div {
-    margin: 25px;
-    margin-right: 60px;
   }
   .box {
     display: flex;
+    margin: 30px;
+  }
+  .box div {
+    margin-right: 25px;
   }
   .items {
     display: flex;
     align-items: center;
   }
-  .items > div {
-    margin-right: 20px;
+  .items > div:hover {
+    cursor: pointer;
+    color: #0f29e8;
   }
-  .mailsend {
-    float: right;
-    width: 66px;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+  .redbutton:hover {
+    cursor: pointer;
+    background-color: #0f29e8;
+    transition: 0.8s;
+  }
+  .contents {
+    display: none !important;
+  }
+  .contents1 {
+    width: 665px;
+    padding: 50px;
+  }
+  .title1 {
+    font-size: 62px;
+  }
+  .content1 {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 19px;
+  }
+  .mail1 {
+    display: flex;
+    background: #fff;
+    width: 502px;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 6px 6px 6px 32px;
+    margin: 50px 163px 0 0;
+  }
+  .mail1 input {
+    border: none;
+    outline: none;
+    align-items: center;
+    margin: 13px 150px 12px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    background-image: url("@/assets/images/rectangle-1.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+  .navs {
+    display: flex;
+  }
+  .hamburger {
+    display: none !important;
+  }
+  .navs {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box {
+    display: flex;
+    margin: 30px;
+  }
+  .box div {
+    margin-right: 25px;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+  }
+  .items > div:hover {
+    cursor: pointer;
+    color: #0f29e8;
+  }
+  .redbutton:hover {
+    cursor: pointer;
+    background-color: #0f29e8;
+    transition: 0.8s;
+  }
+  .contents {
+    display: none !important;
+  }
+  .contents1 {
+    width: 665px;
+    padding: 50px;
+  }
+  .title1 {
+    font-size: 62px;
+  }
+  .content1 {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 19px;
+  }
+  .mail1 {
+    display: flex;
+    background: #fff;
+    width: 502px;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding: 6px 6px 6px 32px;
+    margin: 50px 163px 0 0;
+  }
+  .mail1 input {
+    border: none;
+    outline: none;
+    align-items: center;
+    margin: 13px 150px 12px 0;
   }
 }
 </style>
