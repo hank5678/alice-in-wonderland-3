@@ -132,6 +132,7 @@
   .container {
     background-image: url("@/assets/images/rectangle-1.jpg");
     background-size: cover;
+    background-position: 0px 0px;
     width: 100%;
   }
   .navs {
@@ -198,7 +199,8 @@
 @media (min-width: 1440px) {
   .container {
     background-image: url("@/assets/images/rectangle-1.jpg");
-    background-size: cover;
+    background-repeat: cover;
+    background-position: 0px 0px;
     width: 100%;
   }
   .navs {
@@ -213,7 +215,8 @@
   }
   .box {
     display: flex;
-    margin: 30px;
+    margin: 50px;
+    margin-right: 40px;
   }
   .box div {
     margin-right: 25px;
