@@ -1,39 +1,12 @@
 <template>
   <div class="container">
-    <div class="navs">
-      <div class="mobile">
-        <div class="hamburger">
-          <div class="line line1"></div>
-          <div class="line line2"></div>
-          <div class="line line3"></div>
-        </div>
-      </div>
-      <div class="desktop">
-        <div class="box">
-          <div class="items">
-            <div>Çözüm ve Hizmetler</div>
-            <div>Ürünler</div>
-            <div>Teknolojiler</div>
-            <div>İnsan Kaynakları</div>
-            <div>Kurumsal</div>
-          </div>
-        </div>
-      </div>
-      <div class="redbutton">İletişim</div>
-    </div>
+    <my-nav />
 
-    <div class="contents mobile">
+    <div class="contents">
       <div class="title">Bilgi <br />Teknolojilerinde <br />23 Yıllık Tecrübe</div>
       <div class="content">
         Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı sektörlerde tecrübe kazanmış uzman<br />
         kadrolarımızla Proje Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.
-      </div>
-    </div>
-    <div class="contents desktop">
-      <div class="title">Bilgi Teknolojilerinde <br />23 Yıllık Tecrübe</div>
-      <div class="content">
-        Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı <br />sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş<br />
-        Analizi ve Test Yönetimi hizmetleri sunmaktayız.
       </div>
     </div>
 
@@ -42,46 +15,29 @@
         <div>
           <input type="text" placeholder="Mail bültenimize kayıt ol" />
         </div>
-        <div class="redbutton mailsend">Kayıt Ol</div>
+        <my-button modifier="mailsend">Kayıt Ol</my-button>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import MyNav from "./my-nav.vue"
+import MyButton from "./my-button.vue"
+</script>
 
 <style scoped>
 .container {
   background-image: radial-gradient(circle at 141% 78%, #fff, rgba(255, 255, 255, 0) 107%), url("@/assets/images/rectangle-1.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 754px;
   background-position: right 35% bottom 45%;
   width: 100%;
 }
-.navs {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center;
-}
 
-.redbutton {
-  background-color: #f84646;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 91px;
-  text-align: center;
-}
 .items > div:hover {
   cursor: pointer;
   color: #0f29e8;
-}
-.redbutton:hover {
-  cursor: pointer;
-  background-color: #0f29e8;
-  transition: 0.8s;
 }
 .contents {
   text-align: center;
@@ -109,60 +65,32 @@
   color: rgba(0, 0, 0, 0.4);
   padding-left: 15px;
 }
-.mailsend {
-  width: 90.8px !important;
-  height: 30px !important;
-  padding-top: 15px;
-}
-.line1 {
-  border: 1px solid black;
-  width: 20px;
-}
-.line2 {
-  border: 1px solid black;
-  width: 20px;
-  margin-top: 5px;
-}
-.line3 {
-  border: 1px solid black;
-  width: 20px;
-  margin-top: 5px;
-}
 
 @media (min-width: 375px) and (max-width: 1023px) {
-  .mobile {
-    display: block !important;
-  }
-  .desktop {
-    display: none !important;
-  }
   .items {
-    display: none !important;
+    display: none;
   }
   .hamburger {
     visibility: visible;
   }
+
+  .line {
+    border: 1px solid black;
+    width: 20px;
+  }
+  .line:nth-child(2),
+  .line:nth-child(3) {
+    margin-top: 5px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .mobile {
-    display: none !important;
-  }
-  .desktop {
-    display: block !important;
-  }
   .container {
     background-image: url("@/assets/images/rectangle-1.jpg");
     height: 100vh;
     background-position: 0px 0px;
   }
-  .navs {
-    display: flex;
-  }
   .hamburger {
-    display: none !important;
-  }
-  .navs {
-    justify-content: flex-end;
+    display: none;
   }
 
   .box {
@@ -181,7 +109,9 @@
     font-size: 62px;
     text-align: left;
     margin-left: 122px;
-    margin-top: 93px;
+  }
+  .title br:nth-child(1) {
+    display: none;
   }
   .content {
     margin-top: 20px;
@@ -208,27 +138,16 @@
   }
 }
 @media (min-width: 1440px) {
-  .mobile {
-    display: none !important;
-  }
-  .desktop {
-    display: block !important;
-  }
   .container {
     background-image: url("@/assets/images/rectangle-1.jpg");
-
-    background-position: 0px 0px;
+    background-position: 50% 50%;
   }
 
   .hamburger {
-    display: none !important;
-  }
-  .navs {
-    justify-content: flex-end;
+    display: none;
   }
 
   .box {
-    display: flex;
     margin: 50px;
     margin-right: 0px;
   }
@@ -244,7 +163,9 @@
     font-size: 62px;
     text-align: left;
     margin-left: 122px;
-    margin-top: 93px;
+  }
+  .title br:nth-child(1) {
+    display: none;
   }
   .content {
     margin-top: 20px;
