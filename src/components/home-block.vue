@@ -83,6 +83,7 @@ import MyButton from "./my-button.vue"
     margin-top: 5px;
   }
 }
+
 @media (min-width: 1024px) and (max-width: 1439px) {
   .container {
     background-image: url("@/assets/images/rectangle-1.jpg");

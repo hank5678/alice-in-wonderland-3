@@ -1,11 +1,19 @@
 <template>
   <div>
-    <Navbar></Navbar>
+    <HomeBlock />
+  </div>
+  <div>
+    <QualityBlock />
+  </div>
+  <div>
+    <ProvideBlock />
   </div>
 </template>
 
 <script setup>
-import Navbar from "./components/Navbar.vue"
+import HomeBlock from "./components/home-block.vue"
+import ProvideBlock from "./components/provide-block.vue"
+import QualityBlock from "./components/quality-block.vue"
 </script>
 
 <style scoped>
