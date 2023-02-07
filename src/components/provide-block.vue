@@ -14,7 +14,19 @@ import mySupport from "./my-support.vue"
 <style scoped>
 .container {
   background-color: #f84646;
-  padding: 20px;
+  padding: 21px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 190px;
+  height: 32px;
+  font-size: 14px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-top: 9px;
+  line-height: 2.29;
 }
 
 .title {
@@ -42,32 +54,19 @@ import mySupport from "./my-support.vue"
     justify-content: center;
   }
 }
-
-.content {
-  margin: 0 auto;
-  width: 190px;
-  height: 32px;
-  font-size: 14px;
-  font-size: 14px;
-  text-align: center;
-  color: #fff;
-  margin-top: 9px;
-  line-height: 2.29;
-}
-
 .support {
   margin-top: 55px;
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .support {
-    display: flex;
+    width: 80%;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 @media (min-width: 1440px) {
   .support {
-    display: flex;
+    width: 80%;
     margin: 0 auto;
     justify-content: space-evenly;
   }

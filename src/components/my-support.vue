@@ -31,17 +31,63 @@ let items = ref([
 .support__item {
   margin-top: 44.5px;
 }
-.support__item .support {
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .support__item {
+    display: inline-block;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .support__item {
+    display: inline-block;
+    width: 25%;
+  }
+}
+
+.support {
   width: 183px;
   margin: 0 auto;
   text-align: center;
   color: #fff;
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .support {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .support {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .support__title {
   font-size: 18px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .support__title {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-right: 10px;
+    text-align: left;
+  }
+}
+@media (min-width: 1440px) {
+  .support__title {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    margin-right: 10px;
+    text-align: left;
+  }
 }
 
 .support__icon {
@@ -53,41 +99,14 @@ let items = ref([
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .support {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  .support__item {
-    display: flex;
-    align-items: center;
-    width: 25%;
-  }
-  .support__title {
-    font-size: 12px;
-    width: 100%;
-    margin: 0 auto;
-  }
   .support__icon > img {
     transform: rotate(0deg);
     max-width: 24px;
+    align-items: center;
   }
 }
 
 @media (min-width: 1440px) {
-  .support {
-    display: flex;
-    align-items: center;
-  }
-  .support__item {
-    display: flex;
-    align-items: center;
-  }
-  .support__title {
-    display: flex;
-    font-size: 12px;
-    align-items: center;
-  }
   .support__icon > img {
     transform: rotate(0deg);
     max-width: 24px;
