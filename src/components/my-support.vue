@@ -1,11 +1,9 @@
 <template>
-  <div class="support__item" v-for="(item, index) of items" :key="item">
-    <div class="support">
+  <div class="support">
+    <template v-for="(item, index) of items" :key="index">
       <div class="support__title">{{ item.title }}</div>
-      <div class="support__icon" v-if="items.length - 1 != index">
-        <img :src="item.icon" alt="" />
-      </div>
-    </div>
+      <img class="support__icon" :src="item.icon" alt="" v-if="items.length - 1 != index" />
+    </template>
   </div>
 </template>
 <script setup>
@@ -14,103 +12,70 @@ import icon1 from "@/assets/icons/CaretCircleDoubleRight.png"
 import { ref } from "vue"
 
 let items = ref([
-  { title: "Yazılım Kalitesini Arttırıyoruz", icon: icon1 },
+  { title: "Yazılım Kalitesini\nArttırıyoruz", icon: icon1 },
   {
-    title: "Olası Hataları Önceden Belirliyoruz",
+    title: "Olası Hataları Önceden\nBelirliyoruz",
     icon: icon1
   },
-  { title: "Oluşabilecek Riskleri Önlüyoruz", icon: icon1 },
+  { title: "Oluşabilecek Riskleri\nÖnlüyoruz", icon: icon1 },
   {
-    title: "Zaman ve Maliyetten Tasarruf Sağlıyoruz",
+    title: "Zaman ve Maliyette\nTasarruf Sağlıyoruz",
     icon: icon1
   }
 ])
 </script>
 
 <style scoped>
-.support__item {
-  margin-top: 44.5px;
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .support__item {
-    display: inline-block;
-    width: 25%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .support__item {
-    display: inline-block;
-    width: 25%;
-  }
-}
-
 .support {
-  width: 183px;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 55px auto 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .support {
+    flex-direction: column;
+    height: 500px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .support {
-    display: flex;
-    align-items: center;
+    max-width: 906px;
   }
 }
-
 @media (min-width: 1440px) {
   .support {
-    display: flex;
-    align-items: center;
+    max-width: 1088px;
   }
 }
 
 .support__title {
-  font-size: 18px;
+  white-space: pre-line;
+  color: #ffffff;
   font-weight: bold;
-  text-align: center;
 }
+@media (max-width: 1023px) {
+  .support__title {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1439px) {
   .support__title {
-    display: flex;
-    font-size: 12px;
-    align-items: center;
-    margin-right: 10px;
-    text-align: left;
+    font-size: 14px;
   }
 }
 @media (min-width: 1440px) {
   .support__title {
-    display: flex;
-    font-size: 12px;
-    align-items: center;
-    margin-right: 10px;
-    text-align: left;
+    font-size: 18px;
   }
 }
 
-.support__icon {
-  margin-top: 27px;
-}
-.support__icon > img {
-  max-width: 30px;
-  transform: rotate(90deg);
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .support__icon > img {
-    transform: rotate(0deg);
-    max-width: 24px;
-    align-items: center;
-  }
-}
-
-@media (min-width: 1440px) {
-  .support__icon > img {
-    transform: rotate(0deg);
-    max-width: 24px;
-    align-items: center;
+@media (max-width: 1023px) {
+  .support__icon {
+    transform: rotate(90deg);
   }
 }
 </style>

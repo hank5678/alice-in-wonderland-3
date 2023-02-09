@@ -2,9 +2,7 @@
   <div class="container">
     <div class="title">Test Yönetimiyle Neler Sağlıyoruz?</div>
     <div class="content">IoT Destekli Çözümler</div>
-    <div class="support">
-      <mySupport />
-    </div>
+    <mySupport />
   </div>
 </template>
 <script setup>
@@ -52,23 +50,6 @@ import mySupport from "./my-support.vue"
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-}
-.support {
-  margin-top: 55px;
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .support {
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-evenly;
-  }
-}
-@media (min-width: 1440px) {
-  .support {
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-evenly;
   }
 }
 </style>
