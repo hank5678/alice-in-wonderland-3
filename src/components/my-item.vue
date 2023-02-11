@@ -1,15 +1,23 @@
 <template>
-  <div>
-    <slot name="item__icon"></slot>
+  <div class="item__icon">
+    <img :src="props.item__icon" alt="" />
   </div>
-  <div>
-    <slot name="item__title"></slot>
+
+  <div class="item__title">
+    {{ props.item__title }}
   </div>
-  <div>
-    <slot name="item__content"></slot>
+
+  <div class="item__content">
+    {{ props.item__content }}
   </div>
 </template>
 <script setup>
+const props = defineProps({
+  item__icon: String,
+  item__title: String,
+  item__content: String
+})
+
 // import { ref } from "vue"
 // import icon1 from "@/assets/icons/group 27.png"
 // import icon2 from "@/assets/icons/group 29.png"

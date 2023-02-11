@@ -7,23 +7,7 @@
     </div>
     <div class="manage">
       <div class="item" v-for="item of items" :key="item.id">
-        <myItem>
-          <template #item__icon>
-            <div class="item__icon">
-              <img :src="item.icon" alt="" />
-            </div>
-          </template>
-          <template #item__title>
-            <div class="item__title">
-              {{ item.title }}
-            </div>
-          </template>
-          <template #item__content>
-            <div class="item__content">
-              {{ item.content }}
-            </div>
-          </template>
-        </myItem>
+        <myItem :item__icon="item.icon" :item__title="item.title" :item__content="item.content"></myItem>
       </div>
     </div>
   </div>
