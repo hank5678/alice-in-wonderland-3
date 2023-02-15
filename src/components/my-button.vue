@@ -26,6 +26,20 @@ const props = defineProps(["modifier"])
   background-color: #0f29e8;
   transition: 0.8s;
 }
+.button--readmore {
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 600;
+}
+.button--contact {
+  width: 124px;
+  height: 42px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
 
 @media (max-width: 1023px) {
   .button--mailsend {
