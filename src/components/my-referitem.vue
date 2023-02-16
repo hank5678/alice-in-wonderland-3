@@ -58,6 +58,24 @@ import icon9 from "@/assets/icons/Amazon Logo.png"
   align-items: center;
   text-align: center;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 336px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 336px;
+  }
+}
 
 .item__icon {
   background-color: #fff;
@@ -68,29 +86,41 @@ import icon9 from "@/assets/icons/Amazon Logo.png"
   height: 96px;
   text-align: center;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .item__icon {
+    background: #fff;
+    border-radius: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .item__icon {
+    background: #fff;
+    border-radius: 16px;
+  }
+}
 
-.item:nth-child(4),
-:nth-child(5) {
-  display: none;
+@media (max-width: 1023px) {
+  .item:nth-child(4),
+  :nth-child(5) {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .item {
     border-radius: 16px;
     margin: 120px 24px 120px 0px;
     text-align: center;
     padding: 30px 23px 29px 24px;
   }
-  .item__icon {
-    background: #fff;
+}
+
+@media (min-width: 1440px) {
+  .item {
     border-radius: 16px;
-    margin: 0 0 24px;
-    padding: 18px 24px 17px;
+    margin: 120px 24px 120px 0px;
+    text-align: center;
+    padding: 30px 23px 29px 24px;
   }
 }
 </style>

@@ -31,6 +31,19 @@ import icon2 from "@/assets/icons/Ellipse 5.png"
   height: 90px;
   margin-top: 90px;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (min-width: 1440px) {
+  .icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .icon__first {
   position: relative;
   z-index: 1;
@@ -39,6 +52,18 @@ import icon2 from "@/assets/icons/Ellipse 5.png"
   width: 90px;
   height: 90px;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .icon__first > img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (min-width: 1440px) {
+  .icon__first > img {
+    width: 120px;
+    height: 120px;
+  }
+}
 
 .icon__sec {
   position: absolute;
@@ -46,11 +71,28 @@ import icon2 from "@/assets/icons/Ellipse 5.png"
   top: 5px;
   z-index: 0;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .icon__sec {
+    left: 55px;
+  }
+}
+@media (min-width: 1440px) {
+  .icon__sec {
+    left: 55px;
+  }
+}
 
 .icon__sec > img {
   width: 45px;
   height: 45px;
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .icon__sec > img {
+    width: 61px;
+    height: 61px;
+  }
+}
+
 .title {
   height: 32px;
   font-size: 36px;
@@ -58,6 +100,21 @@ import icon2 from "@/assets/icons/Ellipse 5.png"
   text-align: center;
   margin-bottom: 12px;
   line-height: 0.89;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .title {
+    font-size: 48px;
+    line-height: 0.67;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .title {
+    font-size: 48px;
+    line-height: 0.67;
+    margin-bottom: 20px;
+  }
 }
 .content {
   width: 335px;
@@ -67,8 +124,25 @@ import icon2 from "@/assets/icons/Ellipse 5.png"
   line-height: 1.79;
   text-align: center;
   color: #000;
-
   margin: 0 auto;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .content {
+    font-size: 18px;
+    line-height: 1.78;
+    width: 645px;
+    height: 32px;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .content {
+    font-size: 18px;
+    line-height: 1.78;
+    width: 645px;
+    height: 32px;
+    margin-bottom: 30px;
+  }
 }
 .contactbtn {
   width: 34%;

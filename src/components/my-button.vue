@@ -47,6 +47,10 @@ const props = defineProps(["modifier"])
     height: 50px;
     font-size: 14px;
   }
+  .button--readmore {
+    width: 100%;
+    height: 48px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -55,6 +59,17 @@ const props = defineProps(["modifier"])
     height: 61px;
     font-size: 16px;
   }
+  .button--readmore {
+    width: 160px;
+    height: 48px;
+  }
+  .button--contact {
+    width: 204px;
+    margin: 0 auto;
+    height: 70px;
+    font-size: 24px;
+    line-height: 0.83;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -62,6 +77,17 @@ const props = defineProps(["modifier"])
     width: 136px;
     height: 61px;
     font-size: 16px;
+  }
+  .button--readmore {
+    width: 160px;
+    height: 48px;
+  }
+  .button--contact {
+    width: 204px;
+    margin: 0 auto;
+    height: 70px;
+    font-size: 24px;
+    line-height: 0.83;
   }
 }
 </style>
